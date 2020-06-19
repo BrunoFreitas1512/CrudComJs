@@ -1,3 +1,36 @@
 body {
     background-color: aquamarine;
 }
+.container {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+.grid-form {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+.grid-form form > div:first-child > label {
+    margin-top: 0;
+}
+.grid-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.grid-form form > div:last-child {
+    text-align: center;
+}
+.grid-form button {
+    margin-top: 20px;
+}
+.centraliza {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.grid-form table {
+    text-align: center;
+    line-height: 1;
+}

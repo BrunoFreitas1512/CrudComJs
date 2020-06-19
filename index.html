@@ -7,13 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
-    <div class="container">
-
-    </div>
+      <div class="centraliza">
+        <div class="container grid-form">
+            <form action="" action="POST">
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: Joao" class="form-control">
+                </div>
+                <div>
+                    <label for="cpf">Cpf</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Ex: 123.456.789-10" class="form-control">
+                </div>
+                <div>
+                    <label for="data">Data-Nascimento</label>
+                    <input type="date" name="data" id="data" class="form-control">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success">Enviar</button>
+                </div>
+            </form>
+            <table class="table table-striped">
+                <colgroup>
+                    <col width="400">
+                    <col width="200">
+                    <col width="200">
+                    <col width="100">
+                    <col width="100">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cpf</th>
+                        <th>Data Nascimento</th>
+                        <th>Editar</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Joao
+                        </td>	
+                        <td>
+                            068.073.046-09
+                        </td>
+                        <td>
+                            11/11/1998
+                        </td>
+                        <td>
+                            <a href="#">
+                                <i class="fa fa-magic text-warning"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <i class="fas fa-times text-danger"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
