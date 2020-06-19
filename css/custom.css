@@ -34,3 +34,8 @@ body {
     text-align: center;
     line-height: 1;
 }
+#sucesso, #erro {
+    position: absolute;
+    width: 100%;
+    display: none;
+}

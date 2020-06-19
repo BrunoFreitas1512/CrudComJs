@@ -12,9 +12,17 @@
     <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
+      <div class="alert alert-success alert-dismissible" id="sucesso" style>
+        <button type="button" class="close">&times;</button>
+        <strong>Enviado com sucesso!</strong>
+      </div>
+      <div class="alert alert-danger alert-dismissible" id="erro" style>
+        <button type="button" class="close">&times;</button>
+        <strong>Erro ao enviar!</strong>
+      </div>
       <div class="centraliza">
         <div class="container grid-form">
-            <form action="" action="POST">
+            <form id="form" method="POST">
                 <div>
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" placeholder="Ex: Joao" class="form-control">
@@ -49,27 +57,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            Joao
-                        </td>	
-                        <td>
-                            068.073.046-09
-                        </td>
-                        <td>
-                            11/11/1998
-                        </td>
-                        <td>
-                            <a href="#">
-                                <i class="fa fa-magic text-warning"></i>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <i class="fas fa-times text-danger"></i>
-                            </a>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
