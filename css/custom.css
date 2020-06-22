@@ -22,7 +22,7 @@ body {
 .grid-form form > div:last-child {
     text-align: center;
 }
-.grid-form button {
+.btn-enviar {
     margin-top: 20px;
 }
 .centraliza {
@@ -34,8 +34,18 @@ body {
     text-align: center;
     line-height: 1;
 }
-#sucesso, #erro {
+#sucesso, #erro, #editado {
     position: absolute;
     width: 100%;
     display: none;
+}
+.grid-form table button {
+    padding: 0;
+}
+@media (min-width: 300px) and (max-width: 767px) {
+    .grid-form {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        font-size: 13px;
+    }
 }
