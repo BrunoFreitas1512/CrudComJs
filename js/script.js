@@ -3,6 +3,7 @@ document.querySelectorAll(".close").forEach(item => {
     item.addEventListener("click", function() {
         document.querySelector("#sucesso").style.display = "none";
         document.querySelector("#erro").style.display = "none";
+        document.querySelector("#editado").style.display = "none";
     });
 });
 document.querySelector("#form").addEventListener("submit", function(event) {
@@ -23,6 +24,9 @@ document.querySelector("#form").addEventListener("submit", function(event) {
             <td><button type="button" class="btn" onclick="excluir(${id});"><i class="fas fa-times text-danger"></i></button></td></tr>`;
             cont = {
                 idC: id,
+                nome: nome,
+                cpf: cpf,
+                data: data,
                 text: conteudo,
             };
             conteudos.push(cont);
@@ -38,6 +42,9 @@ document.querySelector("#form").addEventListener("submit", function(event) {
             for (let i = 0; i < conteudos.length; i++) {
                 if (conteudos[i].idC == idEditado) {
                     conteudos[i].idC = idEditado;
+                    conteudos[i].nome = nome;
+                    conteudos[i].cpf = cpf;
+                    conteudos[i].data = data;
                     conteudos[i].text = conteudo;
                 }
             }
@@ -70,10 +77,28 @@ function editar(idE) {
     for (let i = 0; i < conteudos.length; i++) {
         if (conteudos[i].idC == idE) {
             codigoEditar = 1;
-            idEditado = idE;
+            idEditado = idE;        
+            document.querySelector("#nome").value = conteudos[i].nome;
+            document.querySelector("#cpf").value = conteudos[i].cpf;
+            document.querySelector("#data").value = conteudos[i].data;
         }
     }
+
 }
 function excluir(idE) {
-    alert(`O item que vai ser excluido é ${idE}`);
+    alert(`O item que foi excluido é ${idE}`);
+    let tbody = document.querySelector("tbody");
+    let textos;
+    for (let i = 0; i < conteudos.length; i++) {
+        if(conteudos[i].idC === idE) {
+            conteudos.splice(i, 1);
+            console.log(conteudos);
+        }
+        if (i === 0) {
+            textos = conteudos[i].text;  
+        } else {
+            textos += conteudos[i].text;  
+        }
+    }
+    tbody.innerHTML = textos;
 }
